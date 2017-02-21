@@ -35,6 +35,7 @@ export default class PokemonEntry extends Component {
 		const move1 = getFastMoveWithDPS(pokemon.move_1, pokemon.meta.type);
 		const move2 = getFastMoveWithDPS(pokemon.move_2, pokemon.meta.type);
 		const level = getLevel(pokemon.cp_multiplier, pokemon.additional_cp_multiplier);
+		pokemon.pokemon_display.costume
     return (
       <div className={styles.container}>
         <div>
@@ -48,10 +49,10 @@ export default class PokemonEntry extends Component {
         <Avatar
           backgroundColor="white"
           size={50}
-          src={`./images/${pokemon.meta.num}.png`}
+          src={`./images/${pokemon.meta.num}${pokemon.pokemon_display.costume ? 'a' : ''}.png`}
         />
         <div>
-          {pokemon.meta.name} {pokemon.nickname ? `(${pokemon.nickname})` : ''} Level: {level}
+          {pokemon.meta.name} {pokemon.nickname ? `(${pokemon.nickname})` : ''}{pokemon.pokemon_display.gender===1 ? '\u2642' : pokemon.pokemon_display.gender===2 ? '\u2640' : ''} Level: {level}
         </div>
         <div>
           <span className={styles.label}>

@@ -27,7 +27,7 @@ export default class Notifications extends Component {
     return (
       <Snackbar
         open={!!notification.message}
-        message={notification.message}
+        message={notification.message||''}
         autoHideDuration={4000}
         onRequestClose={authStore.resetNotification}
       />

@@ -67,7 +67,6 @@ export default class Login extends Component {
           <SelectField
             value={authStore.provider}
             onChange={this.handleSelect}
-            autowidth
           >
             <MenuItem
               value="google"
