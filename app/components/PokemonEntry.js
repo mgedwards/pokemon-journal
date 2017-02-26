@@ -79,8 +79,7 @@ export default class PokemonEntry extends Component {
 					</span>
 				</div>
 				<div>
-					<span className={styles.label}>From Fort:</span>
-					<span>{pokemon.from_fort?'yes':'no'}({pokemon.pokeball})</span>
+					<span className={styles.label}>{(pokemon.from_fort && pokemon.pokeball===1) ? 'Egg?' : ''}</span>
 				</div>
       </div>
     );
