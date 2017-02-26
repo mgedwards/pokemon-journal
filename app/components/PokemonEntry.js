@@ -37,12 +37,7 @@ export default class PokemonEntry extends Component {
     } = pokemon;
 
     const percentMaxCp = Math.floor(((currCP - minCP) / (maxCP - minCP)) * 100);
-    const percentMaxIv = Math.floor(
-      ((individual_attack || 0) +
-        (individual_defense || 0) +
-        (individual_stamina || 0)) /
-      (45 * 100)
-    );
+    const percentMaxIv = parseFloat((((individual_attack || 0) + (individual_defense || 0) + (individual_stamina || 0)) / .45).toFixed(2));
 
 		const move1 = getFastMoveWithDPS(pokemon.move_1, pokemon.meta.type);
 		const move2 = getFastMoveWithDPS(pokemon.move_2, pokemon.meta.type);

@@ -904,7 +904,7 @@ const pokemons = [
   {
     id: '83',
     num: '083',
-    name: 'Farfetch'd',
+    name: "Farfetch'd",
     img: 'http://www.serebii.net/pokemongo/pokemon/083.png',
     type: 'Normal / Flying',
     height: '0.79 m',
